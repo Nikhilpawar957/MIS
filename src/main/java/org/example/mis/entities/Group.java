@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "groups")
+@Table(name = "group_list")
 public class Group {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
