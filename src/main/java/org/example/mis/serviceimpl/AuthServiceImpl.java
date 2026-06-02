@@ -35,8 +35,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.server.ResponseStatusException;
 
-import jakarta.validation.constraints.NotNull;
-
 @Service
 @Validated
 public class AuthServiceImpl implements AuthService {
@@ -97,7 +95,7 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
-	public String forgotPassword(@NotNull String email) {
+	public String forgotPassword(String email) {
 		Optional<User> optionalUser = userRepo.findByEmail(email);
 		
 		if(optionalUser.isEmpty()) {

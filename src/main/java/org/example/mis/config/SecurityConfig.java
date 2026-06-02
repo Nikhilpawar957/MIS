@@ -46,7 +46,8 @@ public class SecurityConfig {
             .requestMatchers("/uploads/**").permitAll()
             .requestMatchers("/error").permitAll()
             .requestMatchers(
-                "/api/users/login"
+                "/api/auth/login"
+                //"/api/users/add"
             ).permitAll()
             .anyRequest().authenticated()
         )

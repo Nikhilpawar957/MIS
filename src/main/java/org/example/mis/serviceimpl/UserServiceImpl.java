@@ -5,6 +5,7 @@ import java.util.List;
 import org.example.mis.dtos.UserRequestDto;
 import org.example.mis.dtos.UserResponseDto;
 import org.example.mis.entities.User;
+import org.example.mis.entities.UserRole;
 import org.example.mis.exception.PasswordMismatchException;
 import org.example.mis.exception.UserNotFoundException;
 import org.example.mis.repositories.UserRepo;
@@ -68,6 +69,7 @@ public class UserServiceImpl implements UserService{
 		User user = new User();
 		user.setFullName(userReq.getFullName());
 		user.setEmail(userReq.getEmail());
+		user.setRole(UserRole.valueOf(userReq.getRole().toUpperCase()));
 		return user;
 	}
 }
